@@ -20,7 +20,7 @@
        "managers": [ "regex" ],
        "matchUpdateTypes": [ "minor", "patch" ],
        "matchDatasources": [ "maven" ],
-       "matchPackagePatterns": [ "*" ]
+       "matchPackagePatterns": [ "*" ],
        "excludePackagePrefixes": [ "adoptium" ]
     },
     {
