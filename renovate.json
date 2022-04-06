@@ -35,7 +35,7 @@
        "description": "Eclipse updates",
        "managers": [ "regex" ],
        "matchPackagePrefixes": [ "eclipse-platform" ],
-       "versioning": "regex:^(?<compatibility>.*)(?<major>\\d+)?.*(?<minor>\\d+)_(?<patch>\\d+)$"
+       "versioning": "regex:^R(?<minor>\\d+)_(?<patch>\\d+)$"
     }
   ],
 
