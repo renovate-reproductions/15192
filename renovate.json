@@ -16,6 +16,7 @@
   "packageRules": [
     {
        "description": "Minor ebr library updates",
+       "groupName": "ebr library updates",
        "managers": [ "regex" ],
        "allowedVersions": "!/.*(SNAPSHOT|ALPHA|BETA).*$/",
        "matchDatasources": [ "maven", "github-tags", "github-releases" ],
