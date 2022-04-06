@@ -21,14 +21,16 @@
        "allowedVersions": "!/.*(SNAPSHOT|ALPHA|BETA).*$/",
        "matchDatasources": [ "maven", "github-tags", "github-releases" ],
        "matchPackagePatterns": [ "*" ],
-       "excludePackagePrefixes": [ "adoptium" ]
+       "excludePackagePrefixes": [ "adoptium" ],
+       "dependencyDashboardApproval": true
     },
     {
        "description": "Minor JDK updates",
        "managers": [ "regex" ],
        "matchUpdateTypes": [ "minor", "patch" ],
        "matchDatasources": [ "adoptium-java" ],
-       "matchPackagePrefixes": [ "adoptium" ]
+       "matchPackagePrefixes": [ "adoptium" ],
+       "dependencyDashboardApproval": true
     }
   ],
 
