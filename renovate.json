@@ -17,8 +17,8 @@
     {
        "description": "Minor ebr library updates",
        "managers": [ "regex" ],
-       "allowedVersions": "!/\\-SNAPSHOT$/",
-       "matchDatasources": [ "maven" ],
+       "allowedVersions": "!/.*(SNAPSHOT|ALPHA|BETA).*$/",
+       "matchDatasources": [ "maven", "github-tags", "github-releases" ],
        "matchPackagePatterns": [ "*" ],
        "excludePackagePrefixes": [ "adoptium" ]
     },
