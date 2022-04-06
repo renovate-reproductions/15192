@@ -54,8 +54,8 @@
       "matchStrings": [
         "renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?[\\s>-]*\\s+.*?(?<currentValue>(\\d+[.+])+\\d+).*"
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}regex:.*(?<major>\\d+)?.*(?<minor>\\d+).(?<patch>\\d+).*${{/if}}",
-      "extractVersionTemplate": "^(?<compatibility>.*)(?<version>\\d+_\\d+)"
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}regex:.*(?<major>\\d+)?.*(?<minor>\\d+)\\.(?<patch>\\d+).*${{/if}}",
+      "extractVersionTemplate": "(?<version>(\\d+.\\d+))"
     }
   ]
 }
