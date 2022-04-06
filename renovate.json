@@ -16,7 +16,6 @@
   "packageRules": [
     {
        "description": "Minor ebr library updates",
-       "groupName": "ebr library updates",
        "managers": [ "regex" ],
        "allowedVersions": "!/\\-SNAPSHOT$/",
        "matchDatasources": [ "maven" ],
@@ -25,7 +24,6 @@
     },
     {
        "description": "Minor JDK updates",
-       "groupName": "JDK update",
        "managers": [ "regex" ],
        "matchUpdateTypes": [ "minor", "patch" ],
        "matchDatasources": [ "adoptium-java" ],
