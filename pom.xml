@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.test.repo</groupId>
+  <artifactId>com.test.repo.parent</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <properties>
+    <!-- renovate: datasource=github-releases depName=adoptium/temurin11-binaries -->
+    <adoptium_jdk_version>11.0.14.1+1</adoptium_jdk_version>
+
+    <!-- renovate: datasource=maven depName=com/google/guava:guava -->
+    <ebr.com.google.guava.version>31.1</ebr.com.google.guava.version>
+    <!-- renovate: datasource=maven depName=com/google/guava:failureaccess -->
+    <ebr.com.google.guava.failureaccess.version>1.0.1</ebr.com.google.guava.failureaccess.version>
+
+    <!-- renovate: datasource=github-releases depName=protocolbuffers/protobuf -->
+    <ebr.com.google.protobuf.version>3.19.4</ebr.com.google.protobuf.version>
+    <!-- renovate: datasource=github-releases depName=grpc/grpc -->
+    <ebr.io.grpc.version>1.45.0</ebr.io.grpc.version>
+    <!-- renovate: datasource=github-tags depName=netty/netty -->
+    <ebr.io.netty.version>4.1.75</ebr.io.netty.version>
+    <!-- renovate: datasource=maven depName=io/netty:netty-tcnative -->
+    <ebr.io.netty.tcnative.version>2.0.51</ebr.io.netty.tcnative.version>
+    <!-- renovate: datasource=maven depName=io/perfmark:perfmark-api -->
+    <ebr.io.perfmark.api.version>0.25.0</ebr.io.perfmark.api.version>
+    <!-- renovate: datasource=maven depName=org.apache.commons:commons-compress -->
+    <ebr.org.apache.commons.compress.version>1.21</ebr.org.apache.commons.compress.version>
+    <!-- renovate: datasource=maven depName=org.apache.logging.log4j:log4j-core -->
+    <ebr.org.apache.logging.log4j.version>2.17.2</ebr.org.apache.logging.log4j.version>
+    <!-- renovate: datasource=maven depName=org.freemarker:freemarker -->
+    <ebr.org.freemarker.version>2.3.31</ebr.org.freemarker.version>
+    <!-- renovate: datasource=maven depName=org.snmp4j:snmp4j -->
+    <ebr.org.snmp4j.version>3.6.5</ebr.org.snmp4j.version>
+  </properties>
+
+  <build>
+  </build>
+  <repositories>
+    <repository>
+      <id>${eclipse-version}</id>
+      <layout>p2</layout>
+      <url>https://download.eclipse.org/releases/${eclipse-version}</url>
+    </repository>
+  </repositories>
+</project>
