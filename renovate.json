@@ -37,7 +37,7 @@
        "matchUpdateTypes": [ "minor", "patch" ],
        "matchDatasources": [ "github-tags" ],
        "matchPackagePrefixes": [ "eclipse-platform" ]
-       "versioning": "regex:^R(?<minor>\\d+)?(\\.(?<patch>\\d+))
+       "versioning": "regex:^R(?<minor>\\d+)?(\\.(?<patch>\\d+))"
     }
   ],
 
