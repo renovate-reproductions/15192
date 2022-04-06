@@ -37,7 +37,7 @@
        "matchUpdateTypes": [ "minor", "patch" ],
        "matchDatasources": [ "github-tags" ],
        "matchPackagePrefixes": [ "eclipse-platform" ]
-       "versioning": "regex:^R(?<minor>\\d+)?(\\.(?<patch>\\d+))"
+       "versioning": "regex:^(?<minor>\\d+)?(\\.(?<patch>\\d+))"
     }
   ],
 
@@ -56,8 +56,8 @@
       "matchStrings": [
         "renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?[\\s>-]*\\s+.*?(?<currentValue>(\\d+[.+])+\\d+)<"
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}regex:.*(?<minor>\\d+)(.(?<patch>\\d+))?${{/if}}",
-      "extractVersionTemplate": "(?<version>(\\d+[.+])+\\d+)"
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}regex:.*R(?<minor>\\d+)(.(?<patch>\\d+))?${{/if}}",
+      "extractVersionTemplate": "R(?<version>(\\d+[.+])+\\d+)"
     }
   ]
 }
