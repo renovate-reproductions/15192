@@ -21,16 +21,22 @@
        "allowedVersions": "!/.*(SNAPSHOT|ALPHA|BETA).*$/",
        "matchDatasources": [ "maven", "github-tags", "github-releases" ],
        "matchPackagePatterns": [ "*" ],
-       "excludePackagePrefixes": [ "adoptium" ],
-       "dependencyDashboardApproval": true
+       "excludePackagePrefixes": [ "adoptium", "eclipse-platform" ]
     },
     {
        "description": "Minor JDK updates",
        "managers": [ "regex" ],
        "matchUpdateTypes": [ "minor", "patch" ],
        "matchDatasources": [ "adoptium-java" ],
-       "matchPackagePrefixes": [ "adoptium" ],
-       "dependencyDashboardApproval": true
+       "excludePackagePrefixes": [ "eclipse-platform" ],
+       "matchPackagePrefixes": [ "adoptium" ]
+    },
+    {
+       "description": "Eclipse updates",
+       "managers": [ "regex" ],
+       "matchUpdateTypes": [ "minor", "patch" ],
+       "matchDatasources": [ "github-tags" ],
+       "matchPackagePrefixes": [ "eclipse-platform" ]
     }
   ],
 
@@ -42,6 +48,14 @@
         "renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?[\\s>-]*\\s+.*?(?<currentValue>(\\d+[.+])+\\d+)<"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}regex:.*?(?<major>\\d+).(?<minor>\\d+)(.(?<patch>\\d+))?${{/if}}",
+      "extractVersionTemplate": "(?<version>(\\d+[.+])+\\d+)"
+    },
+    {
+      "fileMatch": ["com.intel.isd.repo.targetdefinition.latest.target"],
+      "matchStrings": [
+        "renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?[\\s>-]*\\s+.*?(?<currentValue>(R\\d+[.+])+\\d+)<"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}regex:.*?(?<minor>\\d+)(.(?<patch>\\d+))?${{/if}}",
       "extractVersionTemplate": "(?<version>(\\d+[.+])+\\d+)"
     }
   ]
