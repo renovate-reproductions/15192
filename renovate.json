@@ -33,6 +33,7 @@
     },
     {
        "description": "Eclipse updates",
+       "matchBaseBranches": [ "master" ],
        "managers": [ "regex" ],
        "matchPackagePrefixes": [ "eclipse-platform" ],
        "versioning": "regex:^(<compatibility>.)?(?<minor>\\d+).(?<patch>\\d+)$"
