@@ -35,7 +35,8 @@
        "description": "Eclipse updates",
        "matchBaseBranches": [ "master" ],
        "managers": [ "regex" ],
-       "matchPackagePrefixes": [ "eclipse-platform" ]
+       "matchPackagePrefixes": [ "eclipse-platform" ],
+       "allowedVersions": "/R\\d.\\d+$/"
     }
   ],
 
