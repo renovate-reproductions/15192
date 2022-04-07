@@ -56,7 +56,7 @@
       ],
       "datasourceTemplate": "github-tags",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}regex:.*(?<major>\\d).(?<minor>\\d+)${{/if}}",
-      "extractVersionTemplate": "R(?<version>\\d.\\d+)"
+      "extractVersionTemplate": "(<compatibility>.)(?<version>\\d.\\d+)"
     }
   ]
 }
