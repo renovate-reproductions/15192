@@ -55,7 +55,7 @@
         "renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?[\\s>-]*\\s+.*?(?<currentValue>(\\d[.+])+\\d+).*"
       ],
       "datasourceTemplate": "github-tags",
-      "versioningTemplate": "regex:(?<minor>\\d).(?<patch>\\d+)${{/if}}",
+      "versioningTemplate": "regex:(?<minor>\\d).(?<patch>\\d+)$",
       "extractVersionTemplate": "(<compatibility>.)(?<version>\\d.\\d+)"
     }
   ]
