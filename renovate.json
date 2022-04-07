@@ -36,7 +36,7 @@
        "matchBaseBranches": [ "master" ],
        "managers": [ "regex" ],
        "matchPackagePrefixes": [ "eclipse-platform" ],
-       "versioning": "regex:.*?(?<minor>\\d+)_(?<patch>\\d+).*$",
+       "versioning": "regex:.*?(?<minor>\\d+)_(?<patch>\\d+).*?$"
     }
   ],
 
