@@ -36,7 +36,7 @@
        "matchBaseBranches": [ "master" ],
        "managers": [ "regex" ],
        "matchPackagePrefixes": [ "eclipse-platform" ],
-       "versioning": "regex:.*?(?<minor>\\d+)_(?<patch>\\d+).*?$"
+       "versioning": "regex:.*?(?<minor>\\d).(?<patch>\\d+).*?$"
     }
   ],
 
@@ -53,10 +53,10 @@
     {
       "fileMatch": ["com.intel.isd.repo.targetdefinition.latest.target"],
       "matchStrings": [
-        "renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?[\\s>-]*\\s+.*?(?<currentValue>(\\d+[.+])+\\d+).*"
+        "renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?[\\s>-]*\\s+.*?(?<currentValue>(\\d[.+])+\\d+).*"
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}regex:.*?(?<minor>\\d+).(?<patch>\\d+).*?${{/if}}",
-      "extractVersionTemplate": ".*?(?<version>\\d+_\\d+).*?"
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}regex:.*?(?<minor>\\d).(?<patch>\\d+).*?${{/if}}",
+      "extractVersionTemplate": ".*?(?<version>\\d.\\d+).*?"
     }
   ]
 }
