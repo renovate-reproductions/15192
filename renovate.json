@@ -36,7 +36,8 @@
        "matchBaseBranches": [ "master" ],
        "managers": [ "regex" ],
        "matchPackagePrefixes": [ "eclipse-platform" ],
-       "versioning": "regex:^(<compatibility>.)?(?<minor>\\d+).(?<patch>\\d+)$"
+       "versioning": "regex:^(<compatibility>.)?(?<minor>\\d+).(?<patch>\\d+)$",
+       "extractVersion": "R(?<version>(\\d+.\\d+))"
     }
   ],
 
@@ -55,8 +56,7 @@
       "matchStrings": [
         "renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?[\\s>-]*\\s+.*?(?<currentValue>(\\d+[.+])+\\d+).*"
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}regex:R(?<minor>\\d+).(?<patch>\\d+)${{/if}}",
-      "extractVersionTemplate": "(?<version>(\\d+.\\d+))"
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}regex:(<compatibility>.)?(?<minor>\\d+).(?<patch>\\d+)${{/if}}",
     }
   ]
 }
