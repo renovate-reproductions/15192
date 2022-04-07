@@ -36,8 +36,8 @@
        "matchBaseBranches": [ "master" ],
        "managers": [ "regex" ],
        "matchPackagePrefixes": [ "eclipse-platform" ],
-       "versioning": "regex:^(<compatibility>.)?(?<minor>\\d+).(?<patch>\\d+)$",
-       "extractVersion": "R(?<version>(\\d+.\\d+))"
+       "versioning": "regex:^(<compatibility>.)?(?<minor>\\d+)_(?<patch>\\d+)$",
+       "extractVersion": "R(?<version>(\\d+_\\d+))"
     }
   ],
 
