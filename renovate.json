@@ -3,8 +3,7 @@
   "extends": ["config:base", 
               "docker:enableMajor", 
               ":prHourlyLimitNone",
-              ":rebaseStalePrs",
-              ":disableMajorUpdates"
+              ":rebaseStalePrs"
              ], 
 
   "enabledManagers": [ "regex" ],
@@ -18,7 +17,7 @@
        "description": "Minor ebr library updates",
        "groupName": "ebr library updates",
        "managers": [ "regex" ],
-       "allowedVersions": "!/.*(SNAPSHOT|ALPHA|BETA).*$/",
+       "matchUpdateTypes": [ "minor", "patch" ],
        "matchDatasources": [ "maven", "github-tags", "github-releases" ],
        "matchPackagePatterns": [ "*" ],
        "excludePackagePrefixes": [ "adoptium", "eclipse-platform" ]
@@ -36,7 +35,7 @@
        "matchBaseBranches": [ "master" ],
        "managers": [ "regex" ],
        "matchPackagePrefixes": [ "eclipse-platform" ],
-       "allowedVersions": "/R\\d.\\d+$/"
+       "allowedVersions": "/R\\d.\\d+.*$/"
     }
   ],
 
@@ -53,11 +52,11 @@
     {
       "fileMatch": ["com.intel.isd.repo.targetdefinition.latest.target"],
       "matchStrings": [
-        "renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?[\\s>-]*\\s+.*?(?<currentValue>(\\d[.+])+\\d+).*"
+        "renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>\\S+)[\\s>-]*\\s+.*?(?<currentValue>(\\d[.+])+\\d+).*"
       ],
       "datasourceTemplate": "github-tags",
-      "versioningTemplate": "regex:.*(?<minor>\\d).(?<patch>\\d+)$",
-      "extractVersionTemplate": ".*(?<version>\\d.\\d+)"
+      "versioningTemplate": "regex:.*(?<major>\\d).(?<minor>\\d+).*$",
+      "extractVersionTemplate": ".*(?<version>(\\d.)\\d+).*"
     }
   ]
 }
