@@ -16,11 +16,11 @@
     <ebr.com.google.guava.failureaccess.version>1.0.1</ebr.com.google.guava.failureaccess.version>
 
     <!-- renovate: datasource=maven depName=com/google/protobuf:protobuf-java -->
-    <ebr.com.google.protobuf.version>3.20.0</ebr.com.google.protobuf.version>
+    <ebr.com.google.protobuf.version>3.20.1</ebr.com.google.protobuf.version>
     <!-- renovate: datasource=maven depName=io/grpc:grpc-all -->
     <ebr.io.grpc.version>1.45.1</ebr.io.grpc.version>
     <!-- renovate: datasource=maven depName=io/netty:netty-all -->
-    <ebr.io.netty.version>4.1.75</ebr.io.netty.version>
+    <ebr.io.netty.version>4.1.76</ebr.io.netty.version>
     <!-- renovate: datasource=maven depName=io/netty:netty-tcnative -->
     <ebr.io.netty.tcnative.version>2.0.51</ebr.io.netty.tcnative.version>
     <!-- renovate: datasource=maven depName=io/perfmark:perfmark-api -->
@@ -32,7 +32,7 @@
     <!-- renovate: datasource=maven depName=org.freemarker:freemarker -->
     <ebr.org.freemarker.version>2.3.31</ebr.org.freemarker.version>
     <!-- renovate: datasource=maven depName=org.snmp4j:snmp4j -->
-    <ebr.org.snmp4j.version>3.6.5</ebr.org.snmp4j.version>
+    <ebr.org.snmp4j.version>3.6.7</ebr.org.snmp4j.version>
   </properties>
 
   <build>
