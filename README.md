@@ -1,6 +1,6 @@
 # maven-libs
 
-Update minor and patch library, Java and Eclipse versions in pom.xml.
+Update minor and patch library and Java versions in pom.xml.
 
 Library versions should not update to unstable versions like rc*.
 
