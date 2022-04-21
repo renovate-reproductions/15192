@@ -15,11 +15,11 @@
     <!-- renovate: datasource=maven depName=com/google/guava:failureaccess -->
     <ebr.com.google.guava.failureaccess.version>1.0.1</ebr.com.google.guava.failureaccess.version>
 
-    <!-- renovate: datasource=github-releases depName=protocolbuffers/protobuf -->
-    <ebr.com.google.protobuf.version>3.19.4</ebr.com.google.protobuf.version>
-    <!-- renovate: datasource=github-releases depName=grpc/grpc -->
-    <ebr.io.grpc.version>1.45.0</ebr.io.grpc.version>
-    <!-- renovate: datasource=github-tags depName=netty/netty -->
+    <!-- renovate: datasource=maven depName=com/google/protobuf:protobuf-java -->
+    <ebr.com.google.protobuf.version>3.20.0</ebr.com.google.protobuf.version>
+    <!-- renovate: datasource=maven depName=io/grpc:grpc-all -->
+    <ebr.io.grpc.version>1.45.1</ebr.io.grpc.version>
+    <!-- renovate: datasource=maven depName=io/netty:netty-all -->
     <ebr.io.netty.version>4.1.75</ebr.io.netty.version>
     <!-- renovate: datasource=maven depName=io/netty:netty-tcnative -->
     <ebr.io.netty.tcnative.version>2.0.51</ebr.io.netty.tcnative.version>
