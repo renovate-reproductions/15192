@@ -18,7 +18,7 @@
        "groupName": "ebr library updates",
        "managers": [ "regex" ],
        "matchUpdateTypes": [ "minor", "patch" ],
-       "matchDatasources": [ "maven", "github-tags", "github-releases" ],
+       "matchDatasources": [ "maven" ],
        "matchPackagePatterns": [ "*" ],
        "excludePackagePrefixes": [ "adoptium", "eclipse-platform" ]
     },
