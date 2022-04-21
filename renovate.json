@@ -3,7 +3,8 @@
   "extends": ["config:base", 
               "docker:enableMajor", 
               ":prHourlyLimitNone",
-              ":rebaseStalePrs"
+              ":rebaseStalePrs",
+              ":disableMajorUpdates"
              ], 
 
   "enabledManagers": [ "regex" ],
@@ -17,7 +18,7 @@
        "description": "Minor ebr library updates",
        "groupName": "ebr library updates",
        "managers": [ "regex" ],
-       "matchUpdateTypes": [ "minor", "patch" ],
+       "allowedVersions": "!/.*(SNAPSHOT|ALPHA|BETA|alpha|beta|rc|gc).*$/",
        "matchDatasources": [ "maven" ],
        "matchPackagePatterns": [ "*" ],
        "excludePackagePrefixes": [ "adoptium", "eclipse-platform" ]
